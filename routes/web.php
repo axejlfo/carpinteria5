@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/productos', function(){
+    return view('product');
+})->middleware(['auth:sanctum', 'verified'])->name('productos');
+
+Route::get('/pedidos', function(){
+    return view('pedidos');
+})->middleware(['auth:sanctum', 'verified'])->name('pedidos');
+Route::get('/categorias', function(){
+    return view('categorias');
+})->middleware(['auth:sanctum', 'verified'])->name('categorias');
+
