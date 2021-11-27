@@ -31,4 +31,6 @@ Route::get('/pedidos', function(){
 Route::get('/categorias', function(){
     return view('categorias');
 })->middleware(['auth:sanctum', 'verified'])->name('categorias');
-
+Route::get('/personas', function(){
+    return view('personas');
+})->middleware(['auth:sanctum', 'verified'])->name('personas');

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Distrito;
-use App\Http\Requests\StoreDistritoRequest;
-use App\Http\Requests\UpdateDistritoRequest;
+use App\Models\Persona;
+use App\Http\Requests\StorePersonaRequest;
+use App\Http\Requests\UpdatePersonaRequest;
 
-class DistritoController extends Controller
+class PersonaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,21 +31,21 @@ class DistritoController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreDistritoRequest  $request
+     * @param  \App\Http\Requests\StorePersonaRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDistritoRequest $request)
+    public function store(StorePersonaRequest $request)
     {
-        //f
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Distrito  $distrito
+     * @param  \App\Models\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function show(Distrito $distrito)
+    public function show(Persona $persona)
     {
         //
     }
@@ -53,10 +53,10 @@ class DistritoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Distrito  $distrito
+     * @param  \App\Models\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function edit(Distrito $distrito)
+    public function edit(Persona $persona)
     {
         //
     }
@@ -64,11 +64,11 @@ class DistritoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateDistritoRequest  $request
-     * @param  \App\Models\Distrito  $distrito
+     * @param  \App\Http\Requests\UpdatePersonaRequest  $request
+     * @param  \App\Models\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDistritoRequest $request, Distrito $distrito)
+    public function update(UpdatePersonaRequest $request, Persona $persona)
     {
         //
     }
@@ -76,10 +76,10 @@ class DistritoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Distrito  $distrito
+     * @param  \App\Models\Persona  $persona
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Distrito $distrito)
+    public function destroy(Persona $persona)
     {
         //
     }

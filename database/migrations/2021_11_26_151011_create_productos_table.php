@@ -21,7 +21,6 @@ class CreateProductosTable extends Migration
             $table->decimal("precio_producto");
             $table->string("descuento_producto",100);
             $table->foreignId("categoria_id");
-            $table->foreignId("proveedor_id");
             $table->timestamps();
         });
     }
