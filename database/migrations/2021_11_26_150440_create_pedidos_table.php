@@ -17,9 +17,7 @@ class CreatePedidosTable extends Migration
             $table->id();
             $table->date("fecha_pedido");
             $table->double("total_pedido");
-            $table->string("descripcion_pedido",45);
             $table->foreignId("empleado_id");
-            $table->foreignId("cliente_id");
             $table->timestamps();
         });
     }

@@ -13,10 +13,12 @@ class CreatePedidoProductosTable extends Migration
      */
     public function up()
     {
-        Schema::create('pedido_productos', function (Blueprint $table) {
+        Schema::create('pedido_producto', function (Blueprint $table) {
             $table->id();
             $table->foreignId("pedido_id");
             $table->foreignId("producto_id");
+            $table->integer("precio_actual");
+            $table->integer("cantidad_actual");
             $table->timestamps();
         });
     }

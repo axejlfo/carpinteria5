@@ -20,7 +20,6 @@ class CreatePersonasTable extends Migration
             $table->string("apellido_materno",45);
             $table->string("direccion_persona",45);
             $table->integer("telefono_persona");
-            $table->foreignId("distrito_id");
             $table->timestamps();
         });
     }

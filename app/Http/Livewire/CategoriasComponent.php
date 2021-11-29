@@ -45,8 +45,8 @@ class CategoriasComponent extends Component
             "descripcion" => "required",
         ]);
 
-        $product = Categoria::find($this->categoria_id);
-        $product->update([
+        $category = Categoria::find($this->categoria_id);
+        $category->update([
             'nombre_categoria' => $this->nombre,
             'descripcion_categoria' => $this->descripcion,
         ]);
@@ -56,9 +56,9 @@ class CategoriasComponent extends Component
     public function edit($id){
         $this->categoria_id = $id;
         $this->edit = true;
-        $product = Categoria::find($id);
-        $this->nombre = $product->nombre_categoria;
-        $this->descripcion = $product->descripcion_categoria;
+        $category = Categoria::find($id);
+        $this->nombre = $category->nombre_categoria;
+        $this->descripcion = $category->descripcion_categoria;
     }
 
     public function destroy($id){

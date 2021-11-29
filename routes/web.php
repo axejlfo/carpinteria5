@@ -34,3 +34,6 @@ Route::get('/categorias', function(){
 Route::get('/personas', function(){
     return view('personas');
 })->middleware(['auth:sanctum', 'verified'])->name('personas');
+
+Route::get('login/facebook', 'App\Http\Controllers\Auth\LoginFacebookController@redirect');
+Route::get('login/facebook/callback', 'App\Http\Controllers\Auth\LoginFacebookController@callback');
