@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GitHubController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +36,8 @@ Route::get('/personas', function(){
     return view('personas');
 })->middleware(['auth:sanctum', 'verified'])->name('personas');
 
-Route::get('login/facebook', 'App\Http\Controllers\Auth\LoginFacebookController@redirect');
+Route::get('login/facebook', 'App\Http\Controllers\Auth\LoginFacebookController@redirect')->name('face');
 Route::get('login/facebook/callback', 'App\Http\Controllers\Auth\LoginFacebookController@callback');
+
+Route::get('auth/github', [GitHubController::class, 'gitRedirect'])->name('git');
+Route::get('auth/github/callback', [GitHubController::class, 'gitCallback']);
