@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GitHubController;
 
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,3 +44,13 @@ Route::get('login/facebook/callback', 'App\Http\Controllers\Auth\LoginFacebookCo
 
 Route::get('auth/github', [GitHubController::class, 'gitRedirect'])->name('git');
 Route::get('auth/github/callback', [GitHubController::class, 'gitCallback']);
+
+Route::get('contactanos', function () {
+    //$correo = new ContactanosMailable;
+    //Mail::to('denmodiga12@gmail.com')->send($correo);
+    return "MENSAJE ENVIADO CON ÉXITO";
+});
+
+Route::get('contact', function(){
+    return view('form-contact');
+})->middleware(['auth:sanctum', 'verified'])->name('contact');
